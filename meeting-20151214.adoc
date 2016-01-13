@@ -1,0 +1,60 @@
+= Meeting @ ETH – Dec 14, 2014
+
+Martin, Clément, Daan, Simon, Dominique, Rahel
+
+== Intro / Agenda
+
+Two areas of collaboration:
+
+* **Joint research:** Biological data & visualization tools -> hypothesis generation
+* **Custom development:** Address immediate pain points
+** Orchestrate analysis workflow
+** Make manual steps less cumbersome
+** Improve automatic segmentation
+
+== Status Quo
+
+=== Existing pipeline
+
+Microscope -> ImageJ / MATLAB -> TIFF -> Movies -> ZIP -> Dropbox
+
+* 1 experiment / week (40 positions; ~ 5 GB each)
+* Limited by throughput
+
+=== Manual Analysis Workflow
+
+Dropbox -> Tracking / Segmentation -> Correction -> Scripts (e.g. cell size calculation)
+
+* Send to students
+* Manual "load balancing"
+* Manual "result tracking"
+
+=== Cumbersome architecture
+
+* MATLAB on client machines (manual maintenance)
+* Errors on client (students cannot proceed until fixed, manual patching of scripts)
+* MATLAB also used for manual segmentation -> probably not the ideal tool
+
+== Possible Solutions
+
+* Use Activiti for workflow orchestration
+* Replace MATLAB segmentation on client
+* Keep MATLAB scripts on server (but trigger via Activiti)
+
+== Non-Functional Requirements
+
+* Web UI vs Fat Client?
+* Security not important (but users identifiable)
+* Not ETH-specific -> OSS a valid option
+* Maintainable (future PhDs and Post-Docs might not be as computer-savvy)
+
+== Next Steps
+
+* Legal agreement (FHNW)
+* High-level architecture (FHNW)
+* Analysis workflow prototype (FHNW)
+* Bring Alex into project for image analysis expertise (FHNW)
+
+== Next Meeting
+
+* Smaller group, roughly Q1/2016
