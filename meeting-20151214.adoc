@@ -37,7 +37,7 @@ Dropbox -> Tracking / Segmentation -> Correction -> Scripts (e.g. cell size calc
 
 == Possible Solutions
 
-* Use Activiti for workflow orchestration
+* Use http://activiti.org[Activiti] for workflow orchestration
 * Replace MATLAB segmentation on client
 * Keep MATLAB scripts on server (but trigger via Activiti)
 
